@@ -2,6 +2,9 @@
 
 Displays an adjacency list as a tree and adds some controls to it
 
+![alt text](https://github.com/ferzerkerx/TreeInspector/img/sample.png "sample img")
+
+
 ##File specs
 - File needs to be located under TreeInspector/src/main/resources/com/ferzerkerx/tree_inspector/service/tree_data.txt
 - Format:
