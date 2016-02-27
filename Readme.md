@@ -2,7 +2,7 @@
 
 Displays an adjacency list as a tree and adds some controls to it
 
-![alt text](https://github.com/ferzerkerx/TreeInspector/img/sample.png "sample img")
+![alt text](https://raw.githubusercontent.com/ferzerkerx/TreeInspector/master/img/sample.png "sample img")
 
 
 ##File specs
