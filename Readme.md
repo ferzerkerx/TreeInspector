@@ -1,11 +1,11 @@
-#TreeInspector
+# TreeInspector
 
 Displays an adjacency list as a tree and adds some controls to it
 
 ![alt text](https://raw.githubusercontent.com/ferzerkerx/TreeInspector/master/img/sample.png "sample img")
 
 
-##File specs
+## File specs
 - File needs to be located under TreeInspector/src/main/resources/com/ferzerkerx/tree_inspector/service/tree_data.txt
 - Format:
     - the first line indicates the # of adjanencies to find
@@ -20,8 +20,8 @@ Displays an adjacency list as a tree and adds some controls to it
 ```
 
 
-##Build:
+## Build:
 mvn clean jfx:jar
 
-##Run:
+## Run:
 java -jar target/jfx/app/TreeInspector-1.0-jfx.jar
