@@ -1,5 +1,7 @@
 # TreeInspector
 
+[![Build Status](https://travis-ci.org/ferzerkerx/TreeInspector.svg?branch=master)](https://travis-ci.org/ferzerkerx/TreeInspector)
+
 Displays an adjacency list as a tree and adds some controls to it
 
 ![alt text](https://raw.githubusercontent.com/ferzerkerx/TreeInspector/master/img/sample.png "sample img")
