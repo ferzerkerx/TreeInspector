@@ -64,7 +64,7 @@ public class MainController {
             Color color = new Color(Math.random(), Math.random(), Math.random(), 1.0);
             gc.setFill(color);
 
-            double offset = CIRCLE_DIAMETER / 2;
+            double offset = CIRCLE_DIAMETER / 2.0;
             gc.fillOval(x - offset, y - offset, CIRCLE_DIAMETER, CIRCLE_DIAMETER);
             String value = node.getValue();
             gc.fillText(value, x - offset, y - offset);
