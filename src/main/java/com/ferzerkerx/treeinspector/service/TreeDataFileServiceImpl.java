@@ -31,9 +31,9 @@ public class TreeDataFileServiceImpl implements TreeDataService {
 
         try {
             in = new Scanner(resourceAsStream);
-            int numberOfAdjancencyRelations = in.nextInt();
+            int numberOfAdjacencyRelations = in.nextInt();
 
-            for (int i = 0; i < numberOfAdjancencyRelations; i++) {
+            for (int i = 0; i < numberOfAdjacencyRelations; i++) {
                 int adjacentPersonOneId = in.nextInt();
                 int adjacentPersonTwoId = in.nextInt();
 

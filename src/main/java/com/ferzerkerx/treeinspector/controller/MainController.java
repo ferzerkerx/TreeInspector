@@ -110,7 +110,7 @@ public class MainController {
     }
 
     private void sortNodesForRendering(final List<TreeData.Node> finalParentsNodesInLevel, List<TreeData.Node> nodesInLevel) {
-        Collections.sort(nodesInLevel, (o1, o2) -> {
+        nodesInLevel.sort((o1, o2) -> {
             TreeData.Node node1 = o1.getParent();
             TreeData.Node node2 = o2.getParent();
 
