@@ -1,12 +1,12 @@
 package com.ferzerkerx.treeinspector.controller;
 
 import javax.inject.Inject;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
 import com.ferzerkerx.treeinspector.model.TreeData;
 import com.ferzerkerx.treeinspector.service.TreeDataService;
-import com.ferzerkerx.treeinspector.ui_control.ZoomableScrollPane;
+import com.ferzerkerx.treeinspector.uicontrol.ZoomableScrollPane;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
@@ -14,8 +14,12 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MainController {
+    private static final Logger LOG = LoggerFactory.getLogger(MainController.class);
+
     private static final int CIRCLE_DIAMETER = 20;
     private static final int LINE_WIDTH = 3;
 
@@ -32,7 +36,7 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        System.out.println("Initializing...");
+        LOG.info("Initializing...");
 
         mainCanvas = new Canvas(4000, 4000);
         ZoomableScrollPane zoomableScrollPane = new ZoomableScrollPane(mainCanvas);
@@ -48,7 +52,7 @@ public class MainController {
 
         drawTree(nodes);
 
-        System.out.println("Done...");
+        LOG.info("Done...");
     }
 
     private void drawTree(Map<Integer, TreeData.Node> nodes) {
