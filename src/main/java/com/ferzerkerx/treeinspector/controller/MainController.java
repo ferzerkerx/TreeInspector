@@ -1,12 +1,12 @@
-package com.ferzerkerx.tree_inspector.controller;
+package com.ferzerkerx.treeinspector.controller;
 
 import javax.inject.Inject;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import com.ferzerkerx.tree_inspector.model.TreeData;
-import com.ferzerkerx.tree_inspector.service.TreeDataService;
-import com.ferzerkerx.tree_inspector.ui_control.ZoomableScrollPane;
+import com.ferzerkerx.treeinspector.model.TreeData;
+import com.ferzerkerx.treeinspector.service.TreeDataService;
+import com.ferzerkerx.treeinspector.ui_control.ZoomableScrollPane;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;

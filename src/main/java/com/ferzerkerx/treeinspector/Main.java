@@ -1,4 +1,4 @@
-package com.ferzerkerx.tree_inspector;
+package com.ferzerkerx.treeinspector;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

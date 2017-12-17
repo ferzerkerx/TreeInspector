@@ -1,4 +1,4 @@
-package com.ferzerkerx.tree_inspector.model;
+package com.ferzerkerx.treeinspector.model;
 
 
 

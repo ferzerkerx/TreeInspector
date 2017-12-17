@@ -1,4 +1,4 @@
-package com.ferzerkerx.tree_inspector.ui_control;
+package com.ferzerkerx.treeinspector.ui_control;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;

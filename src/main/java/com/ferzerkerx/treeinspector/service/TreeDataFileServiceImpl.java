@@ -1,4 +1,4 @@
-package com.ferzerkerx.tree_inspector.service;
+package com.ferzerkerx.treeinspector.service;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -7,8 +7,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import com.ferzerkerx.tree_inspector.model.TreeData;
-import com.ferzerkerx.tree_inspector.model.TreeInspectorException;
+import com.ferzerkerx.treeinspector.model.TreeData;
+import com.ferzerkerx.treeinspector.model.TreeInspectorException;
 
 public class TreeDataFileServiceImpl implements TreeDataService {
 
@@ -31,24 +31,24 @@ public class TreeDataFileServiceImpl implements TreeDataService {
 
         try {
             in = new Scanner(resourceAsStream);
-            int n = in.nextInt(); // the number of adjacency relations
+            int numberOfAdjancencyRelations = in.nextInt();
 
-            for (int i = 0; i < n; i++) {
-                int xi = in.nextInt(); // the ID of a person which is adjacent to yi
-                int yi = in.nextInt(); // the ID of a person which is adjacent to xi
+            for (int i = 0; i < numberOfAdjancencyRelations; i++) {
+                int adjacentPersonOneId = in.nextInt();
+                int adjacentPersonTwoId = in.nextInt();
 
-                TreeData.Node node1 = nodes.get(xi);
-                TreeData.Node node2 = nodes.get(yi);
+                TreeData.Node node1 = nodes.get(adjacentPersonOneId);
+                TreeData.Node node2 = nodes.get(adjacentPersonTwoId);
 
 
                 if (node1 == null) {
-                    node1 = createNode(xi);
-                    nodes.put(xi, node1);
+                    node1 = createNode(adjacentPersonOneId);
+                    nodes.put(adjacentPersonOneId, node1);
                 }
 
                 if (node2 == null) {
-                    node2 = createNode(yi);
-                    nodes.put(yi, node2);
+                    node2 = createNode(adjacentPersonTwoId);
+                    nodes.put(adjacentPersonTwoId, node2);
                 }
 
                 node1.addChild(node2);
@@ -65,11 +65,7 @@ public class TreeDataFileServiceImpl implements TreeDataService {
         for (TreeData.Node node : nodes.values()) {
             int level = calculateNodeLevel(node);
             node.setLevel(level);
-            List<TreeData.Node> nodeList = nodesPerLevel.get(level);
-            if (nodeList == null) {
-                nodeList = new ArrayList<>();
-                nodesPerLevel.put(level, nodeList);
-            }
+            List<TreeData.Node> nodeList = nodesPerLevel.computeIfAbsent(level, ignored -> new ArrayList<>());
             nodeList.add(node);
         }
         return nodesPerLevel;
