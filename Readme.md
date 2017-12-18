@@ -1,6 +1,7 @@
 # TreeInspector
 
 [![Build Status](https://travis-ci.org/ferzerkerx/TreeInspector.svg?branch=master)](https://travis-ci.org/ferzerkerx/TreeInspector)
+[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.ferzerkerx%3ATreeInspector)](https://sonarcloud.io/dashboard/index/com.ferzerkerx%3ATreeInspector)
 
 Displays an adjacency list as a tree and adds some controls to it
 
