@@ -47,7 +47,7 @@
                 <configuration>
                     <mainClass>com.ferzerkerx.treeinspector.Main</mainClass>
                 </configuration>
-            </plugin-->
+            </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
@@ -59,12 +59,15 @@
                         <bootclasspath>${sun.boot.class.path}${path.separator}${java.home}/lib/jfxrt.jar</bootclasspath>
                     </compilerArguments>
                 </configuration>
-            </plugin>
+            </plugin-->
             <plugin>
                 <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
+                <artifactId>0.0.3</artifactId>
                 <version>8.8.3</version>
                 <configuration>
+                     <source>${java.compiler.version}</source>
+                     <target>${java.compiler.version}</target>
+                     <release>${java.compiler.version}</release>
                     <mainClass>com.ferzerkerx.treeinspector.Main</mainClass>
                 </configuration>
             </plugin>
