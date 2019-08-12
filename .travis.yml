@@ -2,6 +2,10 @@ language: java
 jdk:
   - openjdk11
 
+before_install:
+  - sudo apt update
+  - sudo apt install openjfx
+
 addons:
   sonarcloud:
     organization: "ferzerkerx-github"
