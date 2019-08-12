@@ -62,8 +62,8 @@
             </plugin-->
             <plugin>
                 <groupId>org.openjfx</groupId>
-                <artifactId>0.0.3</artifactId>
-                <version>8.8.3</version>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
                 <configuration>
                      <source>${java.compiler.version}</source>
                      <target>${java.compiler.version}</target>
