@@ -30,17 +30,17 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.27</version>
         </dependency>
-<dependency>
-    <groupId>org.openjfx</groupId>
-    <artifactId>javafx-controls</artifactId>
-    <version>11</version>
-</dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>11</version>
+        </dependency>
 
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
+            <!--plugin>
                 <groupId>com.zenjava</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>8.8.3</version>
@@ -58,6 +58,14 @@
                     <compilerArguments>
                         <bootclasspath>${sun.boot.class.path}${path.separator}${java.home}/lib/jfxrt.jar</bootclasspath>
                     </compilerArguments>
+                </configuration>
+            </plugin-->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
+                <configuration>
+                    <mainClass>com.ferzerkerx.treeinspector.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
